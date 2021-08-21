@@ -1,21 +1,34 @@
 var student_names = [];
+var darray = [];
 function sub(){
-    var n1 = document.getElementById("s1").value;
-    var n2 = document.getElementById("s2").value;
-    var n3 = document.getElementById("s3").value;
-    var n4 = document.getElementById("s4").value;
-    student_names.push(n1);
-    student_names.push(n2);
-    student_names.push(n3);
-    student_names.push(n4);
+    for (var i = 1; i<=4; i++) {
+        var n = document.getElementById("s"+i).value; 
+       student_names.push(n);
+       console.log(student_names); 
+    }    
     console.log(student_names);
-    document.getElementById("display_value").innerHTML=student_names;
+    var len = student_names.length;
+    console.log(len);
+
+for(var j = 0; j<len; j++){
+    darray.push("<h5> NAME - "+ student_names[j]+"</h5>");
+}
+console.log(darray);
+document.getElementById("display1").innerHTML=darray;
+
+var rc = darray.join(" ");
+console.log(rc)
+document.getElementById("display2").innerHTML = rc;
+
     document.getElementById("b1").style.display = "none";
     document.getElementById("b2").style.display = "inline";
 }   
 
 function sor(){
-    student_names.sort();
-    console.log(student_names);
-    document.getElementById("display_value").innerHTML=student_names;
+    darray.sort();
+    console.log(darray);
+    var rc = darray.join(" ");
+    console.log(rc)
+    document.getElementById("display2").innerHTML = rc;
+
 }

@@ -1,3 +1,19 @@
+#display1 {
+    border: 2px solid yellowgreen;
+    background-color: whitesmoke;
+    width: 600px;
+    border-radius: 10px;
+    padding: 10px;
+}
+#display2 {
+    border: 2px solid blueviolet;
+    background-color: red;
+    width: 600px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
 input {
     margin: 10px;
 }
